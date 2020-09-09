@@ -1,0 +1,51 @@
+pane	0	1	:	1	:*	1	:/home/sam/Code	1	fish	:
+pane	7	1	:ghc	1	:*	1	:/home/sam/Code/practical_haskell/chapter2/src/Chapter2	0	vim	:vim SimpleFunctions.hs
+pane	7	1	:ghc	1	:*	2	:/home/sam/Code/practical_haskell/chapter2/src/Chapter2	1	ghc	:/usr/lib/ghc-8.10.1/bin/ghc -B/usr/lib/ghc-8.10.1 --interactive
+pane	Kumu	1	:	1	:*	1	:/home/sam/Code/kumu	1	vim	:vim .
+pane	Kumu	1	:	1	:*	2	:/home/sam/Code/kumu	0	fish	:
+pane	Kumu	2	:Local server	0	:-	1	:/home/sam/Code/kumu/products/kumu	1	fish	:
+pane	Kumu	3	:Misc	0	:	1	:/home/sam	1	fish	:
+pane	Realtime prototype	1	:	1	:*	1	:/home/sam/Code/sticky-studio	1	fish	:
+pane	Realtime prototype	1	:	1	:*	2	:/home/sam/Code/sticky-studio	0	fish	:
+pane	Realtime prototype	2	:v1.0	0	:-	1	:/home/sam/Code/realtime-prototype	1	fish	:
+pane	Rust	1	:Realtime prototype	1	:*	1	:/home/sam/Code/rust/dale	1	vim	:vim src/cpu.rs
+pane	Rust	1	:Realtime prototype	1	:*	2	:/home/sam/Code/rust/dale	0	fish	:
+pane	Rust	1	:Realtime prototype	1	:*	3	:/home/sam/Code/rust/dale	0	fish	:
+pane	Sticky studio	1	:Code	1	:*	1	:/home/sam/Code/sticky-studio	1	vim	:vim .
+pane	Sticky studio	1	:Code	1	:*	2	:/home/sam/Code/sticky-studio	0	node	:node /usr/bin/yarn start
+pane	Sticky studio	1	:Code	1	:*	3	:/home/sam/Code/sticky-studio/client	0	node	:node /usr/bin/yarn start
+pane	Sticky studio	1	:Code	1	:*	4	:/home/sam/Code/sticky-studio	0	fish	:
+pane	Sticky studio	2	:fish	0	:-	1	:/home/sam/Code/sticky-studio/apps/landing-page/public\ (deleted)	0	vim	:vim index.html
+pane	Sticky studio	2	:fish	0	:-	2	:/home/sam/Code/sticky-studio/apps/landing-page	1	fish	:
+pane	Undercurrent	1	:Code	1	:*	1	:/home/sam/Code/kumu/products	0	vim	:vim undercurrent/
+pane	Undercurrent	1	:Code	1	:*	2	:/home/sam/Code/kumu/products/undercurrent/apps/leading-edge	1	fish	:
+pane	Undercurrent	1	:Code	1	:*	3	:/home/sam/Code/kumu/products	0	fish	:
+pane	Undercurrent	2	:Local server	0	:-	1	:/home/sam/Code/kumu/products/undercurrent/apps/leading-edge/scripts	0	fish	:
+pane	Undercurrent	2	:Local server	0	:-	2	:/home/sam/Code/kumu/products/undercurrent/apps/leading-edge/scripts	1	fish	:
+pane	Undercurrent	2	:Local server	0	:-	3	:/home/sam/Code/kumu/products/undercurrent/apps/leading-edge	0	fish	:
+pane	Undercurrent	3	:Misc	0	:	1	:/home/sam/Code/kumu/products	1	fish	:
+pane	Weavr	1	:Code	1	:*	1	:/home/sam/Code/kumu/products/weavr	1	vim	:vim .
+pane	Weavr	1	:Code	1	:*	2	:/home/sam/Code/kumu	0	fish	:
+pane	Weavr	1	:Code	1	:*	3	:/home/sam/Code/kumu	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	1	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	2	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	3	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	4	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	5	:/home/sam/Code/kumu/products/weavr/web	1	fish	:
+pane	Weavr	2	:Local server	0	:#-	6	:/home/sam/Code/kumu/products/weavr/web	0	fish	:
+window	0	1	1	:*	b85e,274x52,0,0,1
+window	7	1	1	:*	5c51,136x52,0,0[136x26,0,0,47,136x25,0,27,48]
+window	Kumu	1	1	:*	af09,274x52,0,0[274x45,0,0,2,274x6,0,46,3]
+window	Kumu	2	0	:-	b861,274x52,0,0,4
+window	Kumu	3	0	:	b862,274x52,0,0,5
+window	Realtime prototype	1	1	:*	06d6,274x52,0,0[274x26,0,0,6,274x25,0,27,7]
+window	Realtime prototype	2	0	:-	b865,274x52,0,0,8
+window	Rust	1	1	:*	9fd0,274x52,0,0[274x11,0,0,9,274x10,0,12,10,274x29,0,23,11]
+window	Sticky studio	1	1	:*	b318,274x52,0,0[274x32,0,0,12,274x19,0,33{106x19,0,33,13,88x19,107,33,39,78x19,196,33,42}]
+window	Sticky studio	2	0	:-	43a1,274x52,0,0[274x39,0,0,15,274x12,0,40,38]
+window	Undercurrent	1	1	:*	7ab9,274x52,0,0[274x32,0,0,16,274x19,0,33{137x19,0,33,43,136x19,138,33,46}]
+window	Undercurrent	2	0	:-	db3c,274x52,0,0[274x21,0,0,17,274x30,0,22{137x30,0,22,18,136x30,138,22,44}]
+window	Undercurrent	3	0	:	5c68,274x52,0,0,19
+window	Weavr	1	1	:*	a675,274x52,0,0[274x39,0,0,20,274x1,0,40,21,274x10,0,42,23]
+window	Weavr	2	0	:#-	0bd6,274x52,0,0{90x52,0,0[90x26,0,0,24,90x25,0,27,25],90x52,91,0[90x26,91,0,27,90x25,91,27,29],92x52,182,0[92x26,182,0,31,92x25,182,27,34]}
+state	Sticky studio	Undercurrent

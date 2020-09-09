@@ -1,0 +1,46 @@
+pane	0	1	:	1	:*	1	:/home/sam/Code	1	fish	:
+pane	Kumu	1	:	1	:*	1	:/home/sam/Code/kumu	1	vim	:vim .
+pane	Kumu	1	:	1	:*	2	:/home/sam/Code/kumu	0	fish	:
+pane	Kumu	2	:Local server	0	:-	1	:/home/sam/Code/kumu/products/kumu	1	fish	:
+pane	Kumu	3	:Misc	0	:	1	:/home/sam	1	fish	:
+pane	Realtime prototype	1	:Realtime prototype	1	:*	1	:/home/sam/Code/realtime-prototype	1	vim	:vim .
+pane	Realtime prototype	1	:Realtime prototype	1	:*	2	:/home/sam/Code/realtime-prototype	0	fish	:
+pane	Realtime prototype	1	:Realtime prototype	1	:*	3	:/home/sam/Code/realtime-prototype/client	0	node	:node /usr/bin/yarn start
+pane	Realtime prototype	2	:v1.0	0	:-	1	:/home/sam/Code/realtime-prototype	1	fish	:
+pane	Rust	1	:Code	1	:*	1	:/home/sam/Code/rust/dale	1	vim	:vim src/cpu.rs
+pane	Rust	1	:Code	1	:*	2	:/home/sam/Code/rust/dale	0	fish	:
+pane	Rust	1	:Code	1	:*	3	:/home/sam/Code/rust/dale	0	fish	:
+pane	Sticky studio	1	:Code	1	:*	1	:/home/sam/Code/sticky-studio	1	vim	:vim .
+pane	Sticky studio	1	:Code	1	:*	2	:/home/sam/Code/sticky-studio	0	node	:node /usr/bin/yarn dev
+pane	Sticky studio	1	:Code	1	:*	3	:/home/sam/Code/sticky-studio/client	0	node	:node /usr/bin/yarn start
+pane	Sticky studio	2	:fish	0	:-	1	:/home/sam/Code/sticky-studio	1	fish	:
+pane	Undercurrent	1	:Code	1	:*	1	:/home/sam/Code/kumu/products	0	vim	:vim undercurrent/
+pane	Undercurrent	1	:Code	1	:*	2	:/home/sam/Code/kumu/products	1	fish	:
+pane	Undercurrent	1	:Code	1	:*	3	:/home/sam/Code/kumu/products	0	fish	:
+pane	Undercurrent	2	:Local server	0	:	1	:/home/sam/Code/kumu/products/undercurrent/apps/100kin10	1	fish	:
+pane	Undercurrent	2	:Local server	0	:	2	:/home/sam/Code/kumu/products/undercurrent/apps/100kin10	0	fish	:
+pane	Undercurrent	3	:Misc	0	:-	1	:/home/sam/Code/kumu/products	1	vim	:vim /home/sam/.tmux.conf
+pane	Weavr	1	:Code	1	:*	1	:/home/sam/Code/kumu/products/weavr	1	vim	:vim .
+pane	Weavr	1	:Code	1	:*	2	:/home/sam/Code/kumu	0	fish	:
+pane	Weavr	1	:Code	1	:*	3	:/home/sam/Code/kumu	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	1	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	2	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	3	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	4	:/home/sam/Code/kumu/products/weavr	0	fish	:
+pane	Weavr	2	:Local server	0	:#-	5	:/home/sam/Code/kumu/products/weavr	1	fish	:
+pane	Weavr	2	:Local server	0	:#-	6	:/home/sam/Code/kumu/products/weavr/web	0	fish	:
+window	0	1	1	:*	b85e,274x52,0,0,1
+window	Kumu	1	1	:*	af09,274x52,0,0[274x45,0,0,2,274x6,0,46,3]
+window	Kumu	2	0	:-	b861,274x52,0,0,4
+window	Kumu	3	0	:	b862,274x52,0,0,5
+window	Realtime prototype	1	1	:*	1684,274x52,0,0[274x31,0,0,6,274x20,0,32{137x20,0,32,7,136x20,138,32,8}]
+window	Realtime prototype	2	0	:-	b866,274x52,0,0,9
+window	Rust	1	1	:*	6b1c,274x52,0,0[274x11,0,0,10,274x10,0,12,11,274x29,0,23,12]
+window	Sticky studio	1	1	:*	258f,274x52,0,0[274x38,0,0,13,274x13,0,39{137x13,0,39,43,136x13,138,39,45}]
+window	Sticky studio	2	0	:-	dc66,274x52,0,0,46
+window	Undercurrent	1	1	:*	eb2a,274x52,0,0[274x11,0,0,14,274x10,0,12,15,274x29,0,23,17]
+window	Undercurrent	2	0	:	8f5c,274x52,0,0[274x1,0,0,19,274x50,0,2,21]
+window	Undercurrent	3	0	:-	dc62,274x52,0,0,23
+window	Weavr	1	1	:*	668e,274x52,0,0[274x39,0,0,25,274x1,0,40,27,274x10,0,42,30]
+window	Weavr	2	0	:#-	4eb9,274x52,0,0{90x52,0,0[90x26,0,0,29,90x25,0,27,32],90x52,91,0[90x26,91,0,34,90x25,91,27,36],92x52,182,0[92x26,182,0,38,92x25,182,27,41]}
+state	Realtime prototype	Sticky studio
