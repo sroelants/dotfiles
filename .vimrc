@@ -3,7 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " General purpose plugins ---
 " ---------------------------
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround' 
 Plug 'tpope/vim-obsession'
@@ -18,8 +17,17 @@ Plug 'mkitt/tabline.vim'
 Plug 'mtth/scratch.vim'
 Plug 'tpope/vim-markdown'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'airblade/vim-gitgutter'
 Plug 'inkarkat/vim-SyntaxRange'
+
+
+"------------------------------------------------------------------------------
+" Git plugins
+"------------------------------------------------------------------------------
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'stsewd/fzf-checkout.vim'
+
 
 " -------------------
 "  Organizational ---
@@ -112,14 +120,55 @@ Plug 'FrigoEU/psc-ide-vim'
 
 call plug#end()
 
+" -----------------
+"  Key bindings ---
+" -----------------
+let mapleader = ","
+
+" Stop it, hash key.
+inoremap # X<BS>#
+
+" Map <space> to togge folds:
+nnoremap <space> zA<CR>
+
+" Map <leader><tab> to move to next split
+nnoremap <leader><tab> <C-w><C-w>
+
+" Use double-<space> to save the file
+nnoremap <space><space> :w<cr>
+
+" Remap jj to Esc.
+inoremap jj <Esc>
+
+" Toggle paste
+nnoremap <F6> :set paste!<cr>
+
+" Escape terminal mode (nvim)
+tnoremap <Esc> <C-\><C-n>
+
+" Edit and source .vimrc
+nnoremap <silent> <leader>ev :e ~/.vimrc<CR>
+nnoremap <silent> <leader>sv :so ~/.vimrc<CR>
+
+"Remove search highlighting
+nnoremap <leader><space> :noh<cr>   
+
+"Pressing tab jumps to matching bracket 
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Backspace in normal mode goes to previous buffer
+nnoremap <silent><backspace> <C-o> 
+
+" --------------------------
+"  Plugin configurations ---
+" --------------------------
+
 " Scheme / Racket
 if has("autocmd")
   au BufReadPost *.rkt,*.rktl set filetype=scheme
 endif
 
-" --------------------------
-"  Plugin configurations ---
-" --------------------------
 
 " vim-markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'clojure', 'javascript', 'haskell', 'typescript']
@@ -251,8 +300,8 @@ nnoremap <silent>fb :Buffers<cr>
 
 nnoremap <silent><leader>rg :Rg<cr>
 
-" let g:fzf_layout = { 'window': { 'width': 0.5, 'height': 0.5 } }
-" let g:fzf_preview_window = 'right:60%'
+let g:fzf_layout = { 'window': { 'width': 0.7, 'height': 0.6 } }
+let g:fzf_preview_window = 'right:60%'
 
 " Rainbow parentheses
 " Activation based on file type
@@ -274,12 +323,28 @@ let g:startify_files_number           = 18
 " Update session automatically as you exit vim
 let g:startify_session_persistence    = 1
 
+" Autoload session if a Session.vim is found
+let g:startify_session_autoload = 1
+
+" Automatically cd to repository root
+let g:startify_change_to_vcs_root = 0
+
 " Simplify the startify list to just recent files and sessions
 let g:startify_lists = [
   \ { 'type': 'dir',       'header': ['   Recent files'] },
+  \ { 'type': 'bookmarks',       'header': ['   Bookmarks'] },
   \ { 'type': 'sessions',  'header': ['   Saved sessions'] },
   \ ]
 
+
+" Bookmarks 
+let g:startify_bookmarks = [
+      \ '~/Code/kumu',
+      \ '~/Code/sticky-studio',
+      \ '~/Code/sroelants',
+      \ '~/Code',
+      \ '~/Notes'
+      \]
 " Fancy custom header
 let g:startify_custom_header = [
   \ "  ",
@@ -310,8 +375,6 @@ let wiki_2.nested_syntaxes = {'javascript': 'javascript'}
 
 let g:vimwiki_list = [wiki_1, wiki_2]
 
-
-
 " Calendar-vim
 let g:calendar_options = 'nonu nornu'
 nnoremap <leader>c :Calendar<CR>
@@ -321,8 +384,41 @@ let g:nv_search_paths = ['~/Notes']
 nnoremap <silent>fn :NV<cr>
 
 " Prettier
-let g:prettier#autoformat = 0
+let g:prettier#autoformat = 1
 let g:prettier#exec_cmd_async = 1
+
+" Glsl highlighting in js template strings
+for language in ['glsl']
+  call SyntaxRange#Include(language.'`', '`', language, 'String')
+endfor
+
+" Devicons
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:webdevicons_conceal_nerdtree_brackets = 1
+
+
+" ------------------------------------------------------------------------------
+"  Git 
+" ------------------------------------------------------------------------------
+" Keymappings
+" Open git status buffer
+nnoremap <leader>gg :Git<CR>
+" Search and manipulate branches
+nnoremap <leader>gb :GBranches<CR>
+" Search and manipulate commit history
+nnoremap <leader>gc :Commits<CR>
+" Open in browser
+nnoremap <leader>gB :GBrowse<CR>
+" Open visual selection in browser
+vnoremap <leader>gB :GBrowse<CR>
+" Open Diff split
+nnoremap <leader>gd :GDiff<CR>
+" Stage and unstage hunks
+nnoremap <leader>ghs <Plug>(GitGutterStageHunk)
+nnoremap <leader>ghu <Plug>(GitGutterUndoHunk)
+vnoremap <leader>ghs <Plug>(GitGutterStageHunk)
+vnoremap <leader>ghu <Plug>(GitGutterUndoHunk)
 
 " Gitgutter
 " Use fontawesome icons as signs
@@ -333,16 +429,12 @@ let g:gitgutter_sign_removed_first_line = ''
 let g:gitgutter_sign_modified_removed = ''
 
 
-" Glsl highlighting in js template strings
-for language in ['glsl']
-  call SyntaxRange#Include(language.'`', '`', language, 'String')
-endfor
+" ------------------------------------------------------------------------------
+"  Prettier
+" ------------------------------------------------------------------------------
+"  Keymappings
+nnoremap <leader>p :Prettier<CR>
 
-" Devicons
-
-let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-let g:webdevicons_conceal_nerdtree_brackets = 1
 
 
 " --------------------
@@ -458,45 +550,11 @@ colorscheme gruvbox
 "  Coc Linting colors -----
 "  -----------------------
 
-" -----------------
-"  Key bindings ---
-" -----------------
-let mapleader = ","
-
-" Stop it, hash key.
-inoremap # X<BS>#
-
-" Map <space> to togge folds:
-nnoremap <space> zA<CR>
-
-" Map <leader><tab> to move to next split
-nnoremap <leader><tab> <C-w><C-w>
-
-" Use double-<space> to save the file
-nnoremap <space><space> :w<cr>
-
-" Remap jj to Esc.
-inoremap jj <Esc>
-
-" Toggle paste
-nnoremap <F6> :set paste!<cr>
-
-" Escape terminal mode (nvim)
-tnoremap <Esc> <C-\><C-n>
-
-" Edit and source .vimrc
-nnoremap <silent> <leader>ev :e ~/.vimrc<CR>
-nnoremap <silent> <leader>sv :so ~/.vimrc<CR>
-
-"Remove search highlighting
-nnoremap <leader><space> :noh<cr>   
-
-"Pressing tab jumps to matching bracket 
-nnoremap <tab> %
-vnoremap <tab> %
-
-" Backspace in normal mode goes to previous buffer
-nnoremap <silent><backspace> :bp<CR>
-
 " No need for extra "-- INSERT --" mode message
 set noshowmode
+
+" Use system clipboard by default
+set clipboard=unnamedplus
+
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
