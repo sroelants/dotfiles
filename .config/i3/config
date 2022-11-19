@@ -352,8 +352,8 @@ bindsym XF86AudioNext         exec --no-startup-id playerctl next
 
 focus_follows_mouse no
 
-bindsym $mod+t exec $HOME/.bin/touchpad
-bindsym $mod+c exec $HOME/.bin/caps-lock
+# bindsym $mod+t exec $HOME/.bin/touchpad
+# bindsym $mod+c exec $HOME/.bin/caps-lock
 # bindsym $mod+p exec $HOME/.bin/polybar/autohide.sh 
 # bindsym $mod+y exec $HOME/.bin/polybar/hidepoly
 # bindsym $mod+u exec $HOME/.bin/polybar/showpoly
@@ -419,7 +419,9 @@ bindsym $mod+Shift+s exec --no-startup-id ducksearch
 
 bindsym $mod+Shift+w exec --no-startup-id networkmanager_dmenu
 
-bindsym $mod+Shift+o exec --no-startup-id dmenu-edit-configs
+bindsym $mod+c exec --no-startup-id ~/.config/bin/edit-dotfiles.sh
+
+bindsym $mod+e exec rofimoji
 
 
 # bindsym $mod+Shift+m exec --no-startup-id sysmon
