@@ -1,0 +1,22 @@
+[user]
+	username = sroelants
+	email = sam@samroelants.com
+	name = Sam Roelants
+	website = www.samroelants.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICc2ENED+GnyNNpddSS+1Xp1GxCffv3LrF+vS8Qx0CfC sam@samroelants.com
+
+
+[rebase]
+	autoStash = true
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	format = ssh
