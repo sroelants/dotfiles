@@ -2,6 +2,8 @@ alias dot='git --git-dir $HOME/.dotfiles --work-tree=$HOME'
 alias vim='nvim'
 alias bun='~/.bun/bin/bun'
 
+fish_add_path ~/.local/bin --path
+
 # Set up ssh-agent
  if test -z (pgrep ssh-agent)
    eval (ssh-agent -c)

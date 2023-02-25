@@ -1,8 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BROWSER:firefox\x2dnightly
-SETUVAR --export SSH_AGENT_PID:1138
-SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXcYmNmf/agent\x2e1137
+SETUVAR --export SSH_AGENT_PID:1061
+SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXsbICFb/agent\x2e1060
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/sam/\x2elocal/share/z/data
@@ -40,5 +40,5 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/sam/\x2econfig//nvm/14\x2e20\x2e0/bin\x1e/home/sam/\x2ecargo/bin\x1e/home/sam/\x2erbenv/bin\x1e/home/sam/\x2econfig/nvm/14\x2e15\x2e4/bin\x1e/home/sam/\x2econfig/nvm/10\x2e18\x2e1/bin\x1e/home/sam/\x2egem/ruby/2\x2e7\x2e0/bin
+SETUVAR fish_user_paths:/home/sam/\x2econfig//nvm/14\x2e21\x2e2/bin\x1e/home/sam/\x2econfig//nvm/14\x2e20\x2e0/bin\x1e/home/sam/\x2ecargo/bin\x1e/home/sam/\x2erbenv/bin\x1e/home/sam/\x2econfig/nvm/14\x2e15\x2e4/bin\x1e/home/sam/\x2econfig/nvm/10\x2e18\x2e1/bin\x1e/home/sam/\x2egem/ruby/2\x2e7\x2e0/bin
 SETUVAR pure_version:2\x2e4\x2e0
