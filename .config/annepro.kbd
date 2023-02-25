@@ -14,8 +14,8 @@
   -------------------------------------------------------------------------- |#
 
 (defcfg
-  input  (device-file "/dev/input/event18")
-  output (uinput-sink "My KMonad output"
+  input  (device-file "/dev/input/btkeyboard")
+  output (uinput-sink "AnnePro2 Output"
     ;; To understand the importance of the following line, see the section on
     ;; Compose-key sequences at the near-bottom of this file.
     "/usr/bin/sleep 1 && /usr/bin/setxkbmap -option compose:ralt")
@@ -38,6 +38,7 @@ esc     a    o    e    u    i    d    h    t    n    s    -    ret
 (deflayer base
 _       _    _    _    _    _    _    _    _    _    _    _    _
              @ldr              _               @sym
+)
 
 ;; Replace the home row
 (deflayer home-mod-layer
