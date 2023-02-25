@@ -1,4 +1,5 @@
 alias dot='git --git-dir $HOME/.dotfiles --work-tree=$HOME'
+alias lazydot='lazygit -g $HOME/.dotfiles -w $HOME'
 alias vim='nvim'
 alias bun='~/.bun/bin/bun'
 
