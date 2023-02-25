@@ -1,1 +1,0 @@
-("~/src/tufa/" "~/src/wasteland-solid/" "~/src/wasteland-astro/" "~/src/wasteland/" "~/src/tt/" "~/src/sticky-studio-ops/" "~/src/sticky-studio/" "~/src/kumu-ops/" "~/src/kumu/" "~/src/birdoids/" "~/src/atuin/" "~/src/aoc/")
