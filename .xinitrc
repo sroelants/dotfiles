@@ -8,10 +8,15 @@ xmodmap -e "keysym Caps_Lock = Escape" &
 # make short-pressed Ctrl behave like Escape:
 xcape -t 150 -e 'Control_L=Escape' &
 
+xclip&
+
+kmonad ~/.config/laptop.kbd&
+kmonad ~/.config/annepro.kbd&
+
 # Start ssh-agent 
 # eval $(ssh-agent) & # Doing this in fish.config instead
 
 # Reset previously selected wallpaper
-~/.fehbg &
+# ~/.fehbg &
 
 i3
