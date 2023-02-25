@@ -7,7 +7,7 @@ lspconfig.tsserver.setup({})
 lspconfig.rust_analyzer.setup({})
 
 -- lua
-lspconfig.sumneko_lua.setup({})
+lspconfig.lua_ls.setup({})
 
 -- elixir
 lspconfig.elixirls.setup({

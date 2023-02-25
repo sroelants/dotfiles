@@ -52,7 +52,7 @@ return {
 			require('lspconfig').tsserver.setup {
   			capabilities = capabilities
 			}
-			require('lspconfig').sumneko_lua.setup {
+			require('lspconfig').lua_ls.setup {
   			capabilities = capabilities
 			}
 			require('lspconfig').rust_analyzer.setup {

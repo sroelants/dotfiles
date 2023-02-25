@@ -2,7 +2,7 @@ local work = {
   path = "~/Notes",
   syntax = "markdown",
   ext = ".md",
-  nested_syntaxes = { 
+  nested_syntaxes = {
     javascript = "javascript",
     typescript = "typescript"
   }

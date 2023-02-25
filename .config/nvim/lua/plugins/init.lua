@@ -14,7 +14,7 @@ return {
 
   -- Indentation guides
   "lukas-reineke/indent-blankline.nvim",
- 
+
   -- Smart comment/uncomment commands
   { "numToStr/Comment.nvim",
     config = function() require("Comment").setup() end
@@ -55,4 +55,24 @@ return {
     "folke/neodev.nvim",
     config = function() require("neodev").setup({}) end,
   },
+
+  -- Support for kmonad configuration language (.kbd files)
+  "kmonad/kmonad-vim",
+  
+  -- Context-dependent comment strings in typescript/tsx.
+  -- Not sure if it actually works?
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        context_commentstring = {
+          enable = true
+        }
+      })
+    end
+  },
+
+  -- ledger/hledger
+  "ledger/vim-ledger",
+  "anekos/hledger-vim"
 }

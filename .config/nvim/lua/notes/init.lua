@@ -32,15 +32,17 @@ local function find_notes()
       -- Enter opens the file if it exists, or creates a new note
       map({"i", "n"}, "<cr>", function(prompt_bufnr)
         local selection = action_state.get_selected_entry()
-        actions.close(prompt_bufnr)
 
         local curr = action_state.get_current_line()
 
         if (selection == nil) then
+          actions.close(prompt_bufnr)
           create_and_open(curr)
         else
-          actions.select_default()
+          actions.select_default(prompt_bufnr)
+          actions.close(prompt_bufnr)
         end
+
       end)
 
       -- Other mappings go here
