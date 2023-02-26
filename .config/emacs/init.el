@@ -1,4 +1,6 @@
+
 (setq inhibit-startup-message t) ; Don't show the splash screen
+
 (setq visible-bell t) ; Flash  when the bell rings
 
 ;; Turn off unnecessary UI
@@ -14,7 +16,7 @@
 ;; Theme
 (load-theme 'doom-flatwhite t)
 
-(set-face-attribute 'default nil :font "Hack Nerd Font" :height 100)
+(set-face-attribute 'default nil :font "Hack Nerd Font" :height 90)
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 (global-set-key (kbd "C-M-j") 'counsel-switch-buffer)
@@ -150,16 +152,69 @@
   :custom
   (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
-(use-package rust-mode)
-(use-package rustic)
-  
+;; (use-package lsp-mode
+;;   :commands (lsp lsp-deferred)
+;;   :init
+;;   (setq lsp-keymap-prefix "C-c l")
+;;   :config
+;;   (lsp-enable-which-key-integration t))
+
+;; (use-package rust-mode)
+;; (use-package rustic)
+
+(use-package markdown-mode)
+
+;; (use-package company)
+;; (global-company-mode)
+
+(use-package corfu
+  ;; Optional customizations
+  :custom
+  (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+  (corfu-auto t)                 ;; Enable auto completion
+  ;; (corfu-separator ?\s)          ;; Orderless field separator
+  (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
+  ;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
+  ;; (corfu-preview-current nil)    ;; Disable current candidate preview
+  ;; (corfu-preselect 'prompt)      ;; Preselect the prompt
+  ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
+  (corfu-auto-prefix 2)
+  ;; (corfu-auto-delay 0.25)
+ 
+ (corfu-min-width 80)
+ (corfu-max-width corfu-min-width)       ; Always have the same width
+ (corfu-count 14)
+ (corfu-scroll-margin 4) (corfu-scroll-margin 5)        ;; Use scroll margin
+
+  :init
+  (global-corfu-mode)
+  (corfu-popupinfo-mode))
+
+;; (add-hook 'corfu-mode-hook #'corfu-popupinfo-mode)
+
+(use-package eglot)
+
+
+(use-package tree-sitter
+  :ensure t
+  :config
+  ;; activate tree-sitter on any buffer containing code for which it has a parser available
+  (global-tree-sitter-mode)
+  ;; you can easily see the difference tree-sitter-hl-mode makes for python, ts or tsx
+  ;; by switching on and offq
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(use-package tree-sitter-langs
+  :ensure t
+  :after tree-sitter)
+ 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(lsp-mode rustic rust-mode general evil-magit magit counsel-projectile projectile hydra evil-collection evil all-the-icons all-the-fonts doom-themes helpful ivy-rich which-key wohich-key rainbow-delimiters doom-modeline counsel swiper command-log-mode use-package)))
+   '(corfu tree-sitter-langs tree-sitter lsp-mode rustic rust-mode general evil-magit magit counsel-projectile projectile hydra evil-collection evil all-the-icons all-the-fonts doom-themes helpful ivy-rich which-key wohich-key rainbow-delimiters doom-modeline counsel swiper command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
