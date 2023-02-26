@@ -61,7 +61,7 @@ set $borderInactive #504945
 set $borderActive   #928374
 
 # Window Colors
-#			Border		  Background          Text              Indicator
+#			Border		        Background          Text              Indicator
 client.focused          $borderActive     $borderActive       $borderActive     $borderActive
 client.focused_inactive $borderInactive   $borderInactive     $borderInactive   $borderInactive
 client.unfocused        $borderInactive   $borderInactive     $borderInactive   $borderInactive
@@ -124,8 +124,10 @@ for_window [class="Spotify"] move to workspace 10
 
 ###################       GAPS      ##############################
 
+default_border pixel 1
 # No titles, minimal borders
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 0
+
 new_window 1pixel
 
 # You can also use any non-zero value if you'd like to have a border
@@ -134,8 +136,8 @@ new_window 1pixel
 # gaps [inner|outer|horizontal|vertical|top|left|bottom|right] <px>
 # workspace <ws> gaps [inner|outer|horizontal|vertical|top|left|bottom|right] <px>
 
-gaps inner 0
-gaps outer 0
+gaps inner 10 
+gaps outer 5
 # smart_gaps on
 smart_borders on
 
@@ -164,6 +166,7 @@ mode "$mode_gaps_inner" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 mode "$mode_gaps_outer" {
   bindsym plus  gaps outer current plus 5
     bindsym minus gaps outer current minus 5
