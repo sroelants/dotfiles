@@ -99,4 +99,4 @@ vim.opt.scrolloff = 8
 vim.opt.completeopt = { "menu", "menuone", "preview", "noinsert" }
 
 -- Show 80 character line
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
