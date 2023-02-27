@@ -66,6 +66,7 @@ whichkey.register({
 			T = {"<cmd>VimwikiMakeDiaryNote<cr>", "Today's diary (vsplit)" },
 			d = {"<cmd>VimwikiDiaryIndex<cr>", "Diary index" },
 			i = {"<cmd>VimwikiIndex<cr>", "Wiki index" },
+			f = { "<cmd>FindNote<cr>", "Find/create note" },
 		},
 
 		-- Config

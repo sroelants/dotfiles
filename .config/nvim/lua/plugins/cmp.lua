@@ -18,11 +18,18 @@ return {
     			['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
   			}),
 
+				snippet = {
+					expand = function(args)
+						require("luasnip").lsp_expand(args.body)
+					end,
+				},
+
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "cmdline" },
 					{ name = "buffer" },
 					{ name = "path" },
+					{ name = "luasnip" },
 					{ name = "nvim-lua" },
 					{ name = "nvim-lsp-signature-help" },
 				})
@@ -68,4 +75,5 @@ return {
 	{ "hrsh7th/cmp-nvim-lsp" },
 	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
 	{ "hrsh7th/cmp-path" },
+	{ "saadparwaiz1/cmp_luasnip" },
 }

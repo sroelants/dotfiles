@@ -1,0 +1,28 @@
+{
+  "entry": {
+    "prefix": "ent",
+    "body": [
+      "1:year}/${2:month}/${3:day} ${4:label}",
+      "  ${5:account}                                ${6:amount}EUR",
+      "  ${7:account:'Assets:Personal:Fortis'}"
+    ]
+  },
+
+  "groceries": {
+    "prefix": "grc",
+    "body": [
+      "${1:year}/${2:month}/${3:day} Groceries",
+      "  Expenses:Food:Groceries               ${4:amount}EUR",
+      "  Assets:Checking:Fortis"
+    ]
+  },
+
+  "moody coffee": {
+    "prefix": "mdy",
+    "body": [
+      "${1:year}/${2:month}/${3:day} Coffee",
+      "  Expenses:Food:Coffee               ${4:amount}EUR",
+      "  Assets:Checking:Fortis"
+    ]
+  }
+}
