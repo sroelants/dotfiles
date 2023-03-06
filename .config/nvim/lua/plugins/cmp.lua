@@ -32,6 +32,8 @@ return {
 					-- { name = "buffer" },
 					{ name = "nvim-lua" },
 					{ name = "nvim_lsp_signature_help" },
+				  { name = "emoji" },
+
 				})
 			}
 
@@ -76,4 +78,5 @@ return {
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-nvim-lua" },
 	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+	{ "hrsh7th/cmp-emoji" },
 }

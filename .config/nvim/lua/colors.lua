@@ -1,7 +1,10 @@
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 
 -- Default to dark color scheme
-vim.opt.background = "dark"
+-- vim.opt.background = "dark"
+-- vim.cmd("colorscheme oxocarbon")
+vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme catppuccin-mocha")
 
-vim.cmd("colorscheme oxocarbon")
--- vim.cmd("colorscheme gruvbox-material")
+-- vim.opt.background = "light"
+-- vim.cmd("colorscheme github-light")

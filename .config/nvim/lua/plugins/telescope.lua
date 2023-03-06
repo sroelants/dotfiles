@@ -6,7 +6,7 @@ local config = {
     sorting_strategy = "ascending",
     layout_strategy = "flex",
     layout_config = {
-      horizontal = { 
+      horizontal = {
       	prompt_position = "top",
 	      preview_width = 0.55,
       },
@@ -18,12 +18,19 @@ local config = {
     set_env = { COLORTERM = "truecolor" },
     dynamic_preview_title = true,
   },
+
+  pickers = {
+    colorscheme = {
+      enable_preview = true,
+    },
+  },
+
   extensions = {
     project = { base_dirs = { "~/.config/nvim" } }
   }
 }
 return {
-  'nvim-telescope/telescope.nvim', 
+  'nvim-telescope/telescope.nvim',
   tag = '0.1.1',
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function() require('telescope').setup(config) end
