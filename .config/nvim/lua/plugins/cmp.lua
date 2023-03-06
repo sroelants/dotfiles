@@ -26,12 +26,12 @@ return {
 
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
-					{ name = "cmdline" },
-					{ name = "buffer" },
-					{ name = "path" },
+					-- { name = "cmdline" },
+					-- { name = "path" },
 					{ name = "luasnip" },
+					-- { name = "buffer" },
 					{ name = "nvim-lua" },
-					{ name = "nvim-lsp-signature-help" },
+					{ name = "nvim_lsp_signature_help" },
 				})
 			}
 
@@ -39,10 +39,10 @@ return {
 
 			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 			cmp.setup.cmdline({ '/', '?' }, {
-  			mapping = cmp.mapping.preset.cmdline(),
-  			sources = {
-    			{ name = 'buffer' }
-  			}
+  	    mapping = cmp.mapping.preset.cmdline(),
+  	      sources = {
+             { name = 'buffer' }
+  	      }
 			})
 
 			-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
@@ -69,11 +69,11 @@ return {
 		end,
 	},
 
-	{ "hrsh7th/cmp-buffer" },
-	{ "hrsh7th/cmp-cmdline" },
-	{ "hrsh7th/cmp-nvim-lua" },
 	{ "hrsh7th/cmp-nvim-lsp" },
-	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+	{ "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/cmp-path" },
 	{ "saadparwaiz1/cmp_luasnip" },
+	{ "hrsh7th/cmp-buffer" },
+	{ "hrsh7th/cmp-nvim-lua" },
+	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
 }
