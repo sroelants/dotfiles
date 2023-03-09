@@ -3,7 +3,7 @@ return {
 	"morhetz/gruvbox",
 	"arcticicestudio/nord-vim",
 	"kvrohit/mellow.nvim",
-	"rainglow/vim",
+	-- "rainglow/vim",
 	"widatama/vim-phoenix",
 	"nanotech/jellybeans.vim",
 	"axvr/photon.vim",
