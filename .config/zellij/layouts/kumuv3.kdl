@@ -1,0 +1,32 @@
+layout {
+  default_tab_template {
+      // the default zellij tab-bar and status bar plugins
+      pane size=1 borderless=true {
+          plugin location="zellij:tab-bar"
+      }
+      children
+      pane size=2 borderless=true {
+          plugin location="zellij:status-bar"
+      }
+  }
+
+  tab name="Code" focus=true cwd="~/src/kumu-v3-remix" {
+    pane command="fish" {
+      args "-c" "nvim"
+    }
+  }
+
+  tab name="Dev Server" cwd="~/src/kumu-v3-remix" {
+    pane command="fish" {
+      args "-c" "bun run dev"
+    }
+
+    pane command="fish" {
+      args "-c" "docker compose up"
+    }
+
+    pane command="fish" {
+      args "-c" "bun x prisma studio"
+    }
+  }
+}

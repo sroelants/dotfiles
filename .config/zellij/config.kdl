@@ -309,7 +309,7 @@ copy_clipboard "primary"
 
 // The folder in which Zellij will look for themes
 //
-theme_dir "~/.config/zellij/themes"
+// theme_dir "~/.config/zellij/themes"
 
 // Not sure why the theme in the directory wasn't getting picked up...
 themes {

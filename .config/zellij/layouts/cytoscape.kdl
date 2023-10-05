@@ -1,0 +1,34 @@
+layout {
+  default_tab_template {
+      // the default zellij tab-bar and status bar plugins
+      pane size=1 borderless=true {
+          plugin location="zellij:tab-bar"
+      }
+      children
+      pane size=2 borderless=true {
+          plugin location="zellij:status-bar"
+      }
+  }
+  tab name="Cytoscape renderer" focus=true cwd="~/src/kumu-v3" {
+    pane command="fish" {
+      args "-c" "nvim"
+    }
+  }
+
+  tab name="Cytoscape Dev Server" cwd="~/src/kumu-v3" {
+    pane command="fish" {
+      args "-c" "yarn dev"
+    }
+  }
+  tab name="Cytoscape Code" cwd="~/src/cytoscape.js" {
+        pane command="fish" {
+      args "-c" "nvim"
+    }
+  }
+
+  tab name="Cytoscape build" cwd="~/src/cytoscape.js" {
+    pane command="fish" {
+      args "-c" "yarn watch:build:esm"
+    }
+  }
+}
