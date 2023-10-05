@@ -32,8 +32,15 @@ export NVM_DIR="$HOME/.config/nvm"
 
 # Immediately drop into fish shell. This way, we inherit all of bash's env 
 # variables and we don't have to worry about how fish handles things.
-if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
-then
-	exec fish
+# if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
+# then
+# 	exec fish
+# fi
+
+# Automatically added by the Guix install script.
+if [ -n "$GUIX_ENVIRONMENT" ]; then
+    if [[ $PS1 =~ (.*)"\\$" ]]; then
+        PS1="${BASH_REMATCH[1]} [env]\\\$ "
+    fi
 fi
 

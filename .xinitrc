@@ -1,22 +1,45 @@
-# make CapsLock behave like Ctrl:
-setxkbmap -layout us -variant dvorak-intl -option ctrl:nocaps &
+#!/bin/sh
 
-# Map caps lock to be an extra escape key
-xmodmap -e "keysym Caps_Lock = Escape" &
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+sysresources=/etc/X11/xinit/.Xresources
+sysmodmap=/etc/X11/xinit/.Xmodmap
 
-# make short-pressed Ctrl behave like Escape:
-xcape -t 150 -e 'Control_L=Escape' &
+# merge in defaults and keymaps
 
-xclip&
+#if [ -f $sysresources ]; then
+#    xrdb -merge $sysresources
+#fi
+#
+#if [ -f $sysmodmap ]; then
+#    xmodmap $sysmodmap
+#fi
+#
+#if [ -f "$userresources" ]; then
+#    xrdb -merge "$userresources"
+#fi
+#
+#if [ -f "$usermodmap" ]; then
+#    xmodmap "$usermodmap"
+#fi
 
-picom&
-kmonad ~/.config/laptop.kbd&
-kmonad ~/.config/annepro.kbd&
+## start some nice programs
 
-# Start ssh-agent 
-# eval $(ssh-agent) & # Doing this in fish.config instead
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
 
-# Reset previously selected wallpaper
-~/.fehbg &
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
-i3
+# xclip &
+# picom &
+
+# Make sure this is before the 'exec' command or it won't be sourced.
+[ -f /etc/xprofile ] && source /etc/xprofile
+[ -f ~/.xprofile ] && source ~/.xprofile
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+exec i3
