@@ -1,8 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export BROWSER:firefox\x2dnightly
-SETUVAR --export SSH_AGENT_PID:1061
-SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXsbICFb/agent\x2e1060
+SETUVAR --export BROWSER:firefox\x2ddeveloper\x2dedition
+SETUVAR --export SSH_AGENT_PID:3887
+SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXI8GYMz/agent\x2e3886
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/sam/\x2elocal/share/z/data
@@ -10,6 +10,10 @@ SETUVAR Z_DATA_DIR:/home/sam/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:/home/sam
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
+SETUVAR _fisher_lilyball_2F_nix_2D_env_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/nix\x2denv\x2efish
+SETUVAR _fisher_plugins:lilyball/nix\x2denv\x2efish\x1ejorgebucaran/nvm\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
@@ -40,5 +44,7 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/sam/\x2econfig//nvm/14\x2e21\x2e2/bin\x1e/home/sam/\x2econfig//nvm/14\x2e20\x2e0/bin\x1e/home/sam/\x2ecargo/bin\x1e/home/sam/\x2erbenv/bin\x1e/home/sam/\x2econfig/nvm/14\x2e15\x2e4/bin\x1e/home/sam/\x2econfig/nvm/10\x2e18\x2e1/bin\x1e/home/sam/\x2egem/ruby/2\x2e7\x2e0/bin
+SETUVAR fish_user_paths:/home/sam/\x2econfig/nvm/19\x2e8\x2e1/bin\x1e/home/sam/\x2econfig//nvm/14\x2e21\x2e2/bin\x1e/home/sam/\x2econfig//nvm/14\x2e20\x2e0/bin\x1e/home/sam/\x2ecargo/bin\x1e/home/sam/\x2erbenv/bin\x1e/home/sam/\x2econfig/nvm/14\x2e15\x2e4/bin\x1e/home/sam/\x2econfig/nvm/10\x2e18\x2e1/bin\x1e/home/sam/\x2egem/ruby/2\x2e7\x2e0/bin
+SETUVAR nvm_data:/home/sam/\x2elocal/share/nvm
+SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist
 SETUVAR pure_version:2\x2e4\x2e0
