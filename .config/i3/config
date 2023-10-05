@@ -136,8 +136,8 @@ new_window 1pixel
 # gaps [inner|outer|horizontal|vertical|top|left|bottom|right] <px>
 # workspace <ws> gaps [inner|outer|horizontal|vertical|top|left|bottom|right] <px>
 
-gaps inner 10 
-gaps outer 5
+# gaps inner 10 
+# gaps outer 5
 # smart_gaps on
 smart_borders on
 
@@ -357,27 +357,30 @@ bindsym $mod+Tab workspace next
 
 ################### WALLPAPER ####################
 
-exec_always --no-startup-id feh --no-fehbg --bg-scale '/home/sam/Pictures/Wallpapers/wallhaven-4owxrl.png' 
+# exec_always --no-startup-id feh --no-fehbg --bg-scale '/home/sam/Pictures/Wallpapers/wallhaven-4owxrl.png' 
 # exec_always --no-startup-id $HOME/.fehbg &
 ################### POLYBAR ######################
 # 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh&
 
 ################### EXECUTE #####################
 
-exec_always --no-startup-id picom --backend glx --experimental-backends
+exec_always --no-startup-id picom --backend glx --experimental-backends&
 
+exec_always --no-startup-id dunst&
 
-exec_always --no-startup-id dunst
+exec --no-startup-id redshift&
 
 # bluetooth
-exec blueberry-tray
+exec --no-startup-id blueberry-tray&
 
 # get the mouse out of the way with unclutter
-exec_always --no-startup-id unclutter -display :0.0 -idle 3
+exec_always --no-startup-id unclutter -display :0.0 -idle 3&
 
 bindsym $mod+Shift+w exec --no-startup-id networkmanager_dmenu
 
 bindsym $mod+c exec --no-startup-id ~/.config/bin/edit-dotfiles.sh
 
-bindsym $mod+e exec rofimoji
+bindsym $mod+e exec --no-startup-id rofimoji
+
+bindsym $mod+p exec --no-startup-id "firefox-developer-edition -P Private\ User&"
