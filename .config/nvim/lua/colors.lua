@@ -4,4 +4,5 @@ vim.opt.termguicolors = false
 vim.opt.background = "dark"
 -- vim.cmd("colorscheme skull")
 -- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme catppuccin-macchiato")
+-- vim.cmd("colorscheme catppuccin-latte")

@@ -38,10 +38,10 @@ vim.opt.fillchars = {
 
 vim.opt.list = true
 vim.opt.listchars = {
-	tab = "> ", 
-	nbsp = "␣", 
-	trail = "-", 
-	space = " ", 
+	tab = "> ",
+	nbsp = "␣",
+	trail = "-",
+	space = " ",
 	eol = "↴"
 }
 
@@ -99,4 +99,5 @@ vim.opt.scrolloff = 8
 vim.opt.completeopt = { "menu", "menuone", "preview", "noinsert" }
 
 -- Show 80 character line
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
+vim.opt.textwidth = 80

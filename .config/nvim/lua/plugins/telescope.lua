@@ -17,6 +17,12 @@ local config = {
     },
     set_env = { COLORTERM = "truecolor" },
     dynamic_preview_title = true,
+    file_ignore_patterns = {
+      "node_modules",
+      "dist",
+      "*.min.js"
+
+    }
   },
 
   pickers = {

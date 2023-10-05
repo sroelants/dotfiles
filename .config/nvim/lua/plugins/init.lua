@@ -23,23 +23,28 @@ return {
   -- Improved Lua implementation of tpope's vim-surround
   {
       "kylechui/nvim-surround",
-      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
       config = function() require("nvim-surround").setup() end
   },
 
   -- Git indicators in the margin to track changes
   {
     "lewis6991/gitsigns.nvim",
-    config = function() require("gitsigns").setup() end
+    config = function() require("gitsigns").setup({}) end
   },
 
   -- Magit for neovim
   {
     'TimUntersberger/neogit',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'sindrets/diffview.nvim',
+      'ibhagwan/fzf-lua'
+    },
+    config = true
   },
 
-  { 
+  {
     'sindrets/diffview.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
@@ -47,6 +52,8 @@ return {
   -- Lsp loading spinner
   {
     "j-hui/fidget.nvim",
+    tag = "legacy",
+    event = "LspAttach",
     config = function() require("fidget").setup({}) end,
   },
 
@@ -58,7 +65,7 @@ return {
 
   -- Support for kmonad configuration language (.kbd files)
   "kmonad/kmonad-vim",
-  
+
   -- Context-dependent comment strings in typescript/tsx.
   -- Not sure if it actually works?
   {
@@ -74,5 +81,10 @@ return {
 
   -- ledger/hledger
   "ledger/vim-ledger",
-  "anekos/hledger-vim"
+  "anekos/hledger-vim",
+
+  { 'kaarmu/typst.vim',
+    ft = 'typst',
+    lazy=false,
+  }
 }
