@@ -22,6 +22,7 @@
 
     ;; This is the default list of services we
     ;; are appending to, minus GDM
+    ;; %desktop-services))
     (remove 
       (lambda (service) (eq? (service-kind service) gdm-service-type)) 
       %desktop-services)))
@@ -31,7 +32,7 @@
   (firmware (list linux-firmware))
   (locale "en_US.utf8")
   (timezone "Europe/Amsterdam")
-  (keyboard-layout (keyboard-layout "us"))
+  (keyboard-layout (keyboard-layout "us")) ;;Kmonad is responsible for the dvorak layout
   (host-name "moore")
 
   ;; The list of user accounts ('root' is implicit).
@@ -62,7 +63,6 @@
 			  fish
 			  sway
 			  waybar
-			  tofi
 			  kmonad
 
 			  ;; bluetooth
@@ -91,14 +91,13 @@
 			  ; font-iosevka-slab
 			  ; font-iosevka-term
 			  ; font-iosevka-term-slab
-			  font-inconsolata
 			  ; font-hack
 			  ; font-lato
 			  ; font-liberation
 			  ; font-linuxlibertine
 			  ; font-mononoki
 			  ; font-terminus
-			  )
+			  font-inconsolata)
         %base-packages))
 
   ;; Below is the list of system services.  To search for available
