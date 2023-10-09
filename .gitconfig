@@ -5,7 +5,6 @@
 	website = www.samroelants.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICc2ENED+GnyNNpddSS+1Xp1GxCffv3LrF+vS8Qx0CfC sam@samroelants.com
 
-
 [rebase]
 	autoStash = true
 
@@ -20,5 +19,6 @@
 
 [gpg]
 	format = ssh
+
 [core]
 	editor = nvim
