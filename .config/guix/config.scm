@@ -2,6 +2,7 @@
 ;; used in this configuration.
 (use-modules (srfi srfi-1))
 (use-modules (gnu) (nongnu packages linux))
+(use-modules (personal-channel))
 (use-modules (my-services kmonad))
 (use-service-modules cups desktop networking ssh xorg sound)
 (use-package-modules linux networking ssh gnome version-control vim fonts shells
@@ -97,7 +98,8 @@
 			  ; font-linuxlibertine
 			  ; font-mononoki
 			  ; font-terminus
-			  font-inconsolata)
+			  font-inconsolata
+			  font-nerd-fonts)
         %base-packages))
 
   ;; Below is the list of system services.  To search for available
