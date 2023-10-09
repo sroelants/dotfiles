@@ -1,21 +1,21 @@
 font:
   normal:
-    family: Hack Nerd Font
+    family: Inconsolata
     style: Regular
 
   bold:
-    family: Hack Nerd Font
+    family: Inconsolata
     style: Bold
 
   italic:
-    family: Hack Nerd Font
+    family: Inconsolata
     style: Italic
 
   bold_italic:
-    family: Hack Nerd Font
+    family: Inconsolata
     style: Bold Italic
 
-  size: 5.5
+  size: 11
 
 import:
     - ~/.config/alacritty/colorschemes/catppuccin-mocha.yml
