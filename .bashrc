@@ -1,13 +1,8 @@
 #
 # ~/.bashrc
-#
-
-eval "$(rbenv init -)"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
 
 PS1='[\u@\h \W]\$ '
 
@@ -44,3 +39,9 @@ if [ -n "$GUIX_ENVIRONMENT" ]; then
     fi
 fi
 
+GUIX_PROFILE="/home/sam/.config/guix/current"
+source "$GUIX_PROFILE/etc/profile"
+source "/home/sam/.guix-profile/etc/profile"
+
+alias ls='ls --color=auto'
+alias vim="nvim"
