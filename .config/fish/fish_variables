@@ -1,8 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BROWSER:firefox\x2ddeveloper\x2dedition
-SETUVAR --export SSH_AGENT_PID:3887
-SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXI8GYMz/agent\x2e3886
+SETUVAR --export SSH_AGENT_PID:716
+SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXuLamTi/agent\x2e715
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/sam/\x2elocal/share/z/data

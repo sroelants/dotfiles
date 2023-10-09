@@ -13,7 +13,7 @@ fish_add_path ~/.nix-profile/bin --path
    set -Ux SSH_AUTH_SOCK $SSH_AUTH_SOCK
  end
 
-status --is-interactive; and rbenv init - | source
-status --is-interactive; and atuin init fish | source
+# status --is-interactive; and rbenv init - | source
+# status --is-interactive; and atuin init fish | source
 # set fish_greeting
-starship init fish | source
+# starship init fish | source
